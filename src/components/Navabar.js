@@ -22,7 +22,7 @@ const Navabar = () => {
         setLogo(!logo)
     }
     return (
-        <div className='flex justify-between items-center h-20 px-4'>
+        <div className='flex w-full justify-between items-center h-20 px-4 absolute text-white'>
             <div>
                 <h1 onClick={handleNav} className={`${logo ? `hidden` :`block`}`}>BEACHES.</h1>
 
@@ -38,6 +38,8 @@ const Navabar = () => {
             <BiSearch className='' size={20} />
             <BsPerson size={20} />
             </div>
+
+            {/* ================================ MOBILE MENU ============================================*/}
             <div className='md:hidden z-10' onClick={handleNav}>
                 {
                     nav ? <AiOutlineClose size={20}/> :  <HiOutlineMenuAlt4 size={20} className='text-black'/>
@@ -45,7 +47,7 @@ const Navabar = () => {
                 }
             </div>
 
-            <div onClick={handleNav} className={nav ? `${`absolute left-0 top-0 bg-gray-100/90 w-full px-4 py-6 flex flex-col`}` : `absolute left-[-100%]`}> 
+            <div onClick={handleNav} className={nav ? `${`absolute text-black left-0 top-0 bg-gray-100/90 w-full px-4 py-6 flex flex-col`}` : `absolute left-[-100%]`}> 
             <h1>BEACHES.</h1>
 
             <ul>
