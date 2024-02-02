@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --pramary-dark: #5651e5;
+  --pramary-light: #709dff
+}
+li{
+  @apply p-4 text-xl
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  @apply text-3xl font-bold md:text-4xl
+}
+
+button{
+  @apply p-3 border bg-gradient-to-r from-[var(--pramary-dark)] to-[--pramary-light] rounded-md text-white
+}
+
+.icon{
+  color: var(--pramary-light);
+}
+
+.icon{
+  @apply text-2xl cursor-pointer
 }
